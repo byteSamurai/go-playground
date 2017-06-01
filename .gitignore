@@ -1,5 +1,6 @@
 *.sw?
 *.db
+*.idea
 node_modules
 playground-full.*
 webapp/vendor

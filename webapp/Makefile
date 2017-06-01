@@ -1,4 +1,4 @@
-CONTAINER_IMAGE ?= xiam/go-playground
+CONTAINER_IMAGE ?= cyberdwarf/go-playground
 CONTAINER_NAME  ?= go-playground
 TAG ?= latest
 
