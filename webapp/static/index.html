@@ -48,7 +48,7 @@
           return;
         }
         about.show();
-      })
+      });
       // Fire Google Analytics events for Run/Share button clicks.
       if (window.trackEvent) {
         $('#run').click(function() {
@@ -75,6 +75,13 @@
           embed
         </label>
         {{end}}
+
+        <label id="presetLabel">Presets:</label>
+        <input type="button" style="display:none" value="◀" id="prev">
+        <select id="presets">
+          <option value="empty"><i>-no-preset-</i></option>
+        </select>
+        <input type="button" value="▶" id="next">
       </div>
       <div id="aboutControls">
         <input type="button" value="About" id="aboutButton">

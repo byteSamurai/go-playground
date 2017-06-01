@@ -117,7 +117,7 @@ a {
   float: right;
   padding: 10px 15px;
 }
-input[type=button],
+input[type=button],select,
 #importsBox {
   height: 30px;
   font-size: 16px;
@@ -126,14 +126,14 @@ input[type=button],
   position: static;
   top: 1px;
 }
-input[type=button] {
+input[type=button],select {
   background: #333;
   border: 1px solid #222;
   cursor: pointer;
   color: #bbb;
   border-radius: 4px;
 }
-input[type=button]:hover {
+input[type=button]:hover, select:hover {
   color: #fff;
   border: 1px solid #eee;
 }
@@ -158,8 +158,11 @@ input[type=button]:hover {
   color: #eee;
   height: 23px;
 }
-#embedLabel {
+#embedLabel, #presetLabel {
   font-family: Helvetica, Arial, sans-serif;
+}
+#presetLabel{
+  padding-left: 20px;
 }
 .lines {
   float: left;
