@@ -1,16 +1,11 @@
-FROM debian:jessie
+FROM golang:alpine
 
-RUN apt-key update && apt-get update
-RUN apt-get install -y ca-certificates
+WORKDIR /go/src/app
+COPY . .
 
-COPY app_linux_amd64 /bin/app
+RUN go-wrapper download
+RUN go-wrapper install
 
-RUN mkdir /var/app -p
+CMD ["go-wrapper", "run"]
 
-RUN mkdir /var/data -p
-
-COPY static /var/app/static
-
-WORKDIR /var/app
-
-ENTRYPOINT [ "/bin/app" ]
+EXPOSE 3000

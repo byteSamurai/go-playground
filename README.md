@@ -1,5 +1,9 @@
 # Your own Go Playground
 
+## About this fork
+
+Is wished there were some
+
 The [Go Playground][2] is a pretty good way to learn about [Go][1] programs
 without actually installing [Go][1]. You can set up identical playgrounds
 easily using the [golang/playground][3] repository at Github.
