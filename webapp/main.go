@@ -27,7 +27,7 @@ func main() {
 		return
 	}
 
-	if *flagAllowShare {
+	if *flagAllowShare || !*flagDisableCache {
 		var err error
 
 		http.HandleFunc("/share", shareHandler)
