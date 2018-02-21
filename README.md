@@ -45,7 +45,11 @@ app, except that it:
 You can build and run a Go Playground like this:
 
 ```
+sudo dnf install uglify-js
+go get github.com/boltdb/bolt
+go get golang.org/x/tools/imports
 cd webapp
+make -C static
 go build
 ./webapp -allow-share
 # 2016/01/03 08:26:23 Serving Go playground at :3000...

@@ -320,7 +320,7 @@ goPlaygroundOptions({});
             });
         }
 
-        var presetUrl = "http://go-files.byte-samurai.de/";
+        var presetUrl = "//go-files.byte-samurai.de/";
 
         function initDropdown() {
             var presetsSelector = $("#presets");
