@@ -1,11 +1,13 @@
-FROM golang:1.8-alpine3.6
+FROM golang:1.16-alpine
 
+RUN apk update && apk add git make uglify-js
+  
 WORKDIR /go/src/app
 COPY . .
+RUN go get -d -v ./...
+RUN go install -v ./...
+RUN make -C static
 
-RUN go-wrapper download
-RUN go-wrapper install
-
-CMD ["go-wrapper", "run"]
+CMD ["go-webapp"]
 
 EXPOSE 3000
